@@ -1,0 +1,4 @@
+@use "partials/theme";
+body {
+  background: theme.$primary;
+}

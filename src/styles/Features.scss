@@ -1,0 +1,157 @@
+@use "../partials/theme";
+.features {
+  color: white;
+  --s: 140px; /* control the size */
+  display: flex;
+  flex-direction: column;
+  --_g: #0000 52%, white /* first color */ 54% 57%, #0000 59%;
+  background: radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0
+      calc(var(--s) / 2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s) / 2)
+      0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)), #281c2d; /* second color */
+  background-size: calc(var(--s) / 4.667) var(--s),
+    var(--s) calc(var(--s) / 4.667);
+}
+.section-title {
+  margin: 20px;
+  font-size: 32px;
+}
+.section-description {
+  text-align: center;
+  width: clamp(100px, 70vw, 450px);
+  line-height: 1.4;
+}
+
+.speed {
+  width: 80%;
+  max-width: 700px;
+  margin-top: 20px;
+  padding: 20px;
+  margin-inline: auto;
+  background-color: theme.$primary;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .speed-graph {
+    width: 95%;
+    height: 200px;
+    background-color: rgb(70, 70, 70);
+    margin-top: 40px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.graph-item {
+  .graph {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin-inline: -10px;
+    @media (max-width: 900px) {
+      margin-inline: -30vw;
+    }
+    .graph-text {
+      position: relative;
+      top: 70px;
+    }
+    progress {
+      -webkit-appearance: none;
+      appearance: none;
+      transform: rotate(-90deg);
+      height: 30px;
+      border: 1px solid;
+      &[data-glow="true"] {
+        &::-webkit-progress-value {
+          background: linear-gradient(
+            90deg,
+            rgb(200, 31, 200),
+            rgb(107, 107, 194),
+            rgb(112, 219, 255)
+          );
+        }
+      }
+      &::-webkit-progress-bar,
+      &::-moz-progress-bar {
+        border-radius: 30px;
+        border: 1px solid;
+      }
+    }
+  }
+  width: 100%;
+}
+progress::-webkit-progress-value {
+  background-color: rgb(117, 1, 117);
+  border-radius: 5px;
+}
+.content {
+  background: theme.$primary;
+  margin-top: 40px;
+  padding: 20px;
+  * {
+    margin-inline: auto;
+  }
+  .examples {
+    max-width: 950px;
+    margin-top: 40px;
+    display: flex;
+    width: 95%;
+    * {
+      //border: 1px solid;
+    }
+    figure {
+      position: relative;
+      width: 500px;
+      .content-image {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        transition: all 1s;
+      }
+    }
+  }
+  .section-title {
+    text-align: center;
+  }
+}
+.accordion {
+  width: 80%;
+  .accordion-item {
+    .accordion-button {
+      position: relative;
+      width: 100%;
+      border: none;
+      height: 30px;
+      * {
+        //border: 1px solid;
+      }
+      .icon {
+        width: 30px;
+        position: absolute;
+        right: 90%;
+      }
+    }
+    .accordion-content {
+      border: 1px solid;
+      width: 100%;
+      overflow: hidden;
+      max-height: 0px;
+      transition-delay: -1s;
+      transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+    .show {
+      max-height: 200px;
+      transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+    }
+  }
+}
+.top {
+  z-index: 999;
+  opacity: 1 !important;
+}

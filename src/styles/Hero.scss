@@ -1,0 +1,67 @@
+@use "../partials/theme";
+.hero {
+  overflow: hidden;
+  height: 30rem;
+  width: 100vw;
+  background: theme.$primary;
+  color: theme.$secondary;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    height: 25rem * 2;
+    align-items: center;
+  }
+  .hero-main {
+    background: radial-gradient(purple 10%, theme.$primary 70%);
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width: 700px) {
+      width: 50rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 125px;
+      background: radial-gradient(
+        rgba(105, 105, 255, 0.6) 10%,
+        transparent 70%
+      );
+    }
+    * {
+      margin: 5px;
+      margin-inline: 10%;
+    }
+  }
+  img {
+    width: 500px;
+    @media screen and (max-width: 540px) {
+      width: 95%;
+    }
+  }
+  .hero-title {
+    z-index: 20;
+    font-size: 2.5rem;
+  }
+  .hero-subtext {
+    @media screen and (min-width: 900px) {
+      width: 23rem;
+    }
+    width: 300px;
+    z-index: 20;
+  }
+  .hero-button {
+    width: 9rem;
+    height: 2.5rem;
+    border: 1px grey solid;
+    font-weight: 800;
+    font-family: theme.$primary-font;
+    color: rgb(121, 51, 156);
+    border-radius: 2rem;
+  }
+}
