@@ -163,7 +163,16 @@ function ContentSection() {
 function DevelopmentSection() {
   return (
     <>
-      <section className="development"></section>
+      <section className="development">
+        <div className="grid">
+          <div className="grid-item">a</div>
+          <div className="grid-item"></div>
+          <div className="grid-item"></div>
+          <div className="grid-item"> </div>
+          <div className="grid-item"></div>
+          <div className="grid-item"></div>
+        </div>
+      </section>
     </>
   );
 }
