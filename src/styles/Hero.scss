@@ -3,7 +3,7 @@
   overflow: hidden;
   height: 30rem;
   width: 100vw;
-  background: theme.$primary;
+  background: linear-gradient(180deg, theme.$primary, transparent);
   color: theme.$secondary;
   display: flex;
   justify-content: center;
@@ -39,8 +39,9 @@
     }
   }
   img {
-    width: 500px;
-    @media screen and (max-width: 540px) {
+    margin-block: auto;
+    height: 400px;
+    @media screen and (max-width: 530px) {
       width: 95%;
     }
   }

@@ -87,6 +87,7 @@ function ContentSection() {
   const [active, setActive] = useState(1);
   return (
     <>
+      <div className="fade"></div>
       <section className="content">
         <div>
           <h2 className="section-title">Content-focused</h2>
@@ -165,12 +166,63 @@ function DevelopmentSection() {
     <>
       <section className="development">
         <div className="grid">
-          <div className="grid-item">a</div>
-          <div className="grid-item"></div>
-          <div className="grid-item"></div>
-          <div className="grid-item"> </div>
-          <div className="grid-item"></div>
-          <div className="grid-item"></div>
+          <div className="grid-item">
+            <span className="grid-subtext">Easy to use</span>
+            <div className="grid-display"></div>
+            <div className="grid-flex">
+              <h4 className="grid-title">Bring your favorite tools</h4>
+              <p className="grid-text">
+                Your existing UI components already run in Astro, no changes
+                required. Add new integrations to your project with astro add.
+              </p>
+            </div>
+          </div>
+          <div className="grid-item">
+            <span className="grid-subtext">Easy to scale</span>
+            <div className="grid-display"></div>
+            <h4 className="grid-title">Deploy anywhere, even to the edge</h4>
+            <p className="grid-text"></p>
+          </div>
+          <div className="grid-item">
+            <span className="grid-subtext">Sandbox</span>
+            <div className="grid-display"></div>
+            <h4 className="grid-title">Try Astro in your browser</h4>
+            <p className="grid-text">
+              Start your first Astro project right in the browser—no local
+              development environment or signup required!
+            </p>
+            <button className="grid-button">Start a Project</button>
+          </div>
+          <div className="grid-item">
+            <span className="grid-subtext">Get Started</span>
+            <div className="grid-display"></div>
+            <h4 className="grid-title">Explore our ecosystem</h4>
+            <p className="grid-text">
+              Discover 100+ themes & integrations to take your project to the
+              next level: SEO, analytics, CMS integrations and more.
+            </p>
+            <button className="grid-button">Explore Themes</button>
+          </div>
+          <div className="grid-item">
+            <span className="grid-subtext">Documentation</span>
+            <div className="grid-display"></div>
+            <h4 className="grid-title">Learn more in our docs</h4>
+            <p className="grid-text">
+              Thanks to our wonderful contributors, our docs are the best place
+              to learn, troubleshoot, and explore Astro.
+            </p>
+            <button className="grid-button">Start Learning</button>
+          </div>
+          <div className="grid-item">
+            <span className="grid-subtext">Community</span>
+            <div className="grid-display"></div>
+            <h4 className="grid-title">Join our community</h4>
+            <p className="grid-text">
+              Get support, get involved, and join our community of 10,000+ Astro
+              developers—it all happens on Discord.
+            </p>
+            <button className="grid-button">Join our Discord</button>
+          </div>
         </div>
       </section>
     </>
